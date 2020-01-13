@@ -1,6 +1,6 @@
 ###############################################################################################################################
 # This python script uses the IRIS package to upload and process simulation outputs stored as nc files. In the first part 
-# of the code, the ENSO 3.4 index is computedstarting from monthly SST data. In the second part, the ENSO index is plotted. 
+# of the code, the ENSO 3.4 index is computed starting from monthly SST data. In the second part, the ENSO index is plotted. 
 #################################################################################################################################
 import iris 
 import iris.plot as iplt
