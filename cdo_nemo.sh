@@ -1,6 +1,6 @@
 ##################################################################################################################################
 ## This bash script searches in all directories and subdirectories of a specified path monthly NEMO model outputs (each month is
-## stored in a different direcory). The script then uses CDO to select a group of variables and regrid them from the 
+## stored in a different directory). The script then uses CDO to select a group of variables and regrid them from the 
 ## ocean model native grid to a regular lat-lon grid. 
 ## Note that the script has been designed to be run (also) on incomplete/running simulations. If an alredy remapped file is found 
 ## in any directory, after making sure the file is the right size (i.e. it is not corrupted) the scripts will skip that file and
