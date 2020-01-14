@@ -1,7 +1,13 @@
 ################################################################################################################################
-#
-#
-#
+# This python script reads in and computes differences between two simulations (AR and MO) on different temporal timescales: 
+# 10, 30, 50, 100 and 200 years. Both simulations are 200 years long. The code is organized as follows:
+# 1) First a function to compute mean and standard deviation is defined: MO_minus_AR.
+# 2) Afterwards, a plotting function is defined:  Plot. This funtion will plot figures with a number of subplots depending 
+#    on the timescale (i.e. Figure 1 will show 20 subplots each showing a 10-year mean, Figure 2 will show 9 subplots each 
+#    showing a 30-year mean, and etc). The user can decide whether plotting using the polar or global projections.  
+# 3) The different variables (SST, SIC, SAT, LW TOA, SW TOA, U, V and etc) are then uploaded- users can choose which datset to
+#    upload by commenting/uncommenting out the relevant bit of code
+# 4) Finally the MO_minus_AR and Plot functions are called and the plots are produced. 
 ###############################################################################################################################
 import iris 
 import iris.plot as iplt
@@ -90,7 +96,7 @@ def MO_minus_AR(MO, AR):
 
 ########################################### Plotting function ##########################################################################################################################
 
-def Plot(mean, label, prj, lat0, long0, color_map, parallels, meridians, global_pr, S_N):
+def Plot(mean, label, prj, lat0, long0, color_map, parallels, meridians, global_pr):
 
  for n in range (0, 4): 
  
@@ -223,7 +229,7 @@ AR= (U_AR**2. + V_AR**2.)**0.5
 ###################################### CALLING FUNCTIONS & PROCESS DATA ###############################################################################################################################
 
 #use MO_minus_AR function to compute mean and stdev at each grid-points over different averaging periods 
-mean, stdev, stdev_MO = MO_minus_AR(MO, AR)
+mean, stdev = MO_minus_AR(MO, AR)
 
 ##calling plotting function:
 
