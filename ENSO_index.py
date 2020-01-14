@@ -68,7 +68,6 @@ times= pd.date_range(start='1850-01-01', periods=months, freq='MS') #create arra
 
 
 fig = plt.figure()
-
 ax = fig.add_subplot(211)
 
 fig.autofmt_xdate()
@@ -76,7 +75,7 @@ plt.plot(times, ENSO_MO_3month.data, c='black',linewidth=1,  label='MONSOON')
 plt.fill_between(times, 0.5, np.ma.masked_where(ENSO_MO_3month.data <= 0.5, ENSO_MO_3month.data) , alpha=0.5, facecolor='orangered')
 plt.fill_between(times, -0.5, np.ma.masked_where(ENSO_MO_3month.data >= -0.5, ENSO_MO_3month.data) , alpha=0.5, facecolor='darkgreen')
 plt.xlabel('Time(years)', fontsize=14)
-plt.ylabel('SAM Index', fontsize=14)
+plt.ylabel('ENSO Index', fontsize=14)
 plt.title('ENSO Index MONSOON 1850-2050', fontsize=16)
 plt.ticklabel_format(axis='y',useOffset=False) 
 ax.xaxis.set_major_locator(mdates.YearLocator(10))
