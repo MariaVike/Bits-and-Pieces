@@ -3,9 +3,9 @@
 # 10, 30, 50, 100 and 200 years. Both simulations are 200 years long. The code is organized as follows:
 # 1) First a function to compute mean and standard deviation is defined: MO_minus_AR.
 # 2) Afterwards, a plotting function is defined:  Plot. This funtion will plot figures with a number of subplots depending 
-#    on the timescale (i.e. Figure 1 will show 20 subplots each showing a 10-year mean, Figure 2 will show 9 subplots each 
+#    on the timescale (i.e. Figure 1 will show 20 subplots each showing a 10-year mean, Figure 2 will show 6 subplots each 
 #    showing a 30-year mean, and etc). The user can decide whether plotting using the polar or global projections.  
-# 3) The different variables (SST, SIC, SAT, LW TOA, SW TOA, U, V and etc) are then uploaded- users can choose which datset to
+# 3) The different variables (SST, SIC, SAT, LW TOA, SW TOA, U, V and etc) are then uploaded - Users can choose which datset to
 #    upload by commenting/uncommenting out the relevant bit of code
 # 4) Finally the MO_minus_AR and Plot functions are called and the plots are produced. 
 ###############################################################################################################################
